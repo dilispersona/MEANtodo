@@ -10,6 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var todos_component_1 = require('./components/todos.component');
+var todo_service_1 = require('./services/todo.service');
+var http_1 = require('@angular/http');
 var AppComponent = (function () {
     function AppComponent() {
     }
@@ -18,7 +20,8 @@ var AppComponent = (function () {
             moduleId: module.id,
             selector: 'my-app',
             templateUrl: 'app.component.html',
-            directives: [todos_component_1.TodosComponent]
+            directives: [todos_component_1.TodosComponent],
+            providers: [http_1.HTTP_PROVIDERS, todo_service_1.TodoService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
